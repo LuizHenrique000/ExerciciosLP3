@@ -26,7 +26,7 @@ public class CardMagia extends Card {
 
 	@Override
 	public void exibirLogDeRegistro() {
-		System.out.println("Card de Magia registrado: " + getNome() + "\n" + getEfeito());
+		System.out.println("\nCard de Magia registrado: " + getNome() + "\nEfeito: " + getEfeito() + "\nDescrição: " + getDescricao());
 		
 	}
 
