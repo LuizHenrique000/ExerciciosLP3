@@ -26,7 +26,7 @@ public class CardArmadilha extends Card {
 
 	@Override
 	public void exibirLogDeRegistro() {
-		System.out.println("Card de Armadilha registrado: " + getNome() + "\n" + getEfeito());
+		System.out.println("\nCard de Armadilha registrado: " + getNome() + "\nEfeito: " + getEfeito() + "\nDescrição: " + getDescricao());
 		
 	}
 	
