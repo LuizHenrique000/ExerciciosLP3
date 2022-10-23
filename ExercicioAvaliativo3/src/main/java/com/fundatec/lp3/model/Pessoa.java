@@ -1,30 +1,25 @@
-package com.fundatec.lp3.models;
+package com.fundatec.lp3.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+
+import lombok.Data;
 
 @Entity
-@AllArgsConstructor
-@Getter
-@Setter
-@ToString
+@Data
 public class Pessoa {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	
-	@Column(name = "NOME")
+
+	@Column
 	private String nome;
-	
-	@Column(name = "CPF")
+
+	@Column
 	private String cpf;
 
 }
