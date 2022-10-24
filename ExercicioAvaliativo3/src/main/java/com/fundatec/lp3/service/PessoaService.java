@@ -17,6 +17,9 @@ public class PessoaService {
 		this.pessoaRepository = pessoaRepository;
 	}	
 	
+	//Primeira regra
+	//A metodo possui apenas uma responsabilidade 
+	
 	public List<Pessoa> listarPessoas() {
 		return pessoaRepository.findAll();
 	}

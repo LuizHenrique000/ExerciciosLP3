@@ -23,12 +23,20 @@ public class PessoaController {
 	
 	PessoaService pessoaService;
 
+	//Segunda regra
+	//Utilizei aqui a injeção de dependências para tornar o codigo desacoplado
+	
 	@Autowired
 	public PessoaController(PessoaRepository pessoaRepository, PessoaService pessoaService) {
 		this.pessoaRepository = pessoaRepository;
 		this.pessoaService = pessoaService;
 		
 	}
+	
+	//Terceira regra
+	//O nome do método é bem claro
+	//Não especifiquei o que o metodo lista no nome porque o 
+	//retorno do próprio e a service reforçam isso 
 
 	@GetMapping
 	public ResponseEntity<List<Pessoa>> listar() {
@@ -36,6 +44,9 @@ public class PessoaController {
 		return ResponseEntity.ok(pessoas);
 
 	}
+	
+	//Quarta regra
+	//O metodo adicionarPessoa só requer um parâmetro
 
 	@PostMapping
 	public ResponseEntity<Pessoa> adicionarPessoa(@RequestBody Pessoa pessoa) {
@@ -50,5 +61,9 @@ public class PessoaController {
 		return ResponseEntity.noContent().build();
 
 	}
+	
+	//Quinta regra
+	//Padronizei o retorno de ambos os metodos para que sigam um padrão
+	//No caso o retorno de ambos é uma ResponseEntity
 
 }
