@@ -10,25 +10,20 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.fundatec.lp3.model.Pessoa;
-import com.fundatec.lp3.repository.PessoaRepository;
 import com.fundatec.lp3.service.PessoaService;
 
 @RestController
 @RequestMapping("/pessoa")
 public class PessoaController {
-
-	PessoaRepository pessoaRepository;
 	
-	PessoaService pessoaService;
+	private PessoaService pessoaService;
 
 	//Segunda regra
 	//Utilizei aqui a injeção de dependências para tornar o codigo desacoplado
 	
 	@Autowired
-	public PessoaController(PessoaRepository pessoaRepository, PessoaService pessoaService) {
-		this.pessoaRepository = pessoaRepository;
+	public PessoaController(PessoaService pessoaService) {
 		this.pessoaService = pessoaService;
 		
 	}

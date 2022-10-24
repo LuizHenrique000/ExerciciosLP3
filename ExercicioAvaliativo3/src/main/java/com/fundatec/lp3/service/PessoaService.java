@@ -10,7 +10,7 @@ import com.fundatec.lp3.repository.PessoaRepository;
 @Service
 public class PessoaService {
 	
-	public PessoaRepository pessoaRepository;
+	private PessoaRepository pessoaRepository;
 	
 	@Autowired
 	public PessoaService(PessoaRepository pessoaRepository) {
